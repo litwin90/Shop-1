@@ -1,0 +1,11 @@
+<div class="product-item">
+      <ul>
+          <li>Category: {{product.category}}</li>
+          <li>Name: {{product.name}}</li>
+          <li>Author: {{product.author}}</li>
+          <li>Description: {{product.description}}</li>
+          <li>Price: {{product.price}}$</li>
+          <li>Available: {{product.isAvailable}}</li>
+      </ul>
+      <button class="btn" (click)="onBuy(product)">Buy</button>
+</div>
