@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CartService } from '../cart.service';
 
 import { ProductItem } from '../product.model';
@@ -11,10 +11,10 @@ import { ProductItem } from '../product.model';
 export class ProductComponent {
     @Input() product: ProductItem;
 
-    constructor(public cartService: CartService) {}
+    @Output()
+    buy: EventEmitter<ProductItem> = new EventEmitter<ProductItem>();
 
-    onBuy(product): void {
-        console.log(product.name, 'book added to cart');
-        this.cartService.addToCart(product);
+    onBuy(product: ProductItem): void {
+        this.buy.emit(product);
     }
 }
