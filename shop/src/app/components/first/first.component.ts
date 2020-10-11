@@ -12,7 +12,5 @@ export class FirstComponent {
     price = 1000;
     isAvailable = true;
     sizes: string[] = ['large', 'small'];
-    colorName: string = Color[2];
-
-    constructor() {}
+    colorName: string = Color.Blue;
 }
