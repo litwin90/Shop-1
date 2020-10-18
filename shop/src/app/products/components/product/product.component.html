@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <ul>
+            <li>Category: {{product.category}}</li>
+            <li>Author: {{product.author}}</li>
+            <li>Description: {{product.description}}</li>
+            <li>Price: {{product.price}}$</li>
+            <li>Available: {{product.isAvailable}}</li>
+        </ul>
+        <button 
+            type="button"
+            class="btn btn-primary"
+            [disabled]="!product.isAvailable"
+            (click)="onBuy(product)">
+                Buy
+        </button>
+    </div>
+</div>
