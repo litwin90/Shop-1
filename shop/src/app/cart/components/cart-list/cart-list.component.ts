@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/core/services/storage.service';
 
 import { ICartData } from '../../models/cart-data.model';
 import { ICartProductItem } from '../../models/cart-product.model';
